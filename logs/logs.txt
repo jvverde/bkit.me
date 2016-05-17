@@ -1,0 +1,7 @@
+opening tcp connection to 10.1.2.6 port 873
+sending daemon args: --server -vvltrRe.iLsfxC --delete-after --inplace . meatfeup/E/  (6 args)
+building file list ... done
+total: matches=0  hash_hits=0  false_alarms=0 data=0
+
+sent 915 bytes  received 11 bytes  617.33 bytes/sec
+total size is 255.61K  speedup is 276.04

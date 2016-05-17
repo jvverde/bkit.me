@@ -1,0 +1,1 @@
+c:\cygwin64\bin\rsync.exe -rltvh --chmod=ugo=rwX --delete-after --inplace --exclude-from=c:\tmp\excludes.txt /proc/sys/Device/HarddiskVolumeShadowCopy15/./ me@10.1.2.6::meatfeup/v0/C:/ 2>c:\tmp\err.txt

@@ -1,0 +1,1 @@
+c:\cygwin64\bin\rsync.exe -rltvhR --chmod=ugo=rwX --inplace --exclude-from=c:\tmp\excludes.txt /proc/sys/Device/HarddiskVolumeShadowCopy15/Users/./acmsi_000/AppData/Local/Google/Chrome me@10.1.2.6::meatfeup/C/Users/ 2>c:\tmp\err.txt

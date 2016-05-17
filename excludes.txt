@@ -1,0 +1,11 @@
+$Recycle.Bin
+pagefile.sys
+hiberfil.sys
+swapfile.sys
+Users/*/AppData/Local/Temp
+Documents and Settings/*/Cookies
+Documents and Settings/*/Recent
+Documents and Settings/*/Local Settings/Temp
+iobw.tst
+RECYCLER
+

@@ -1,0 +1,149 @@
+
+==========================================
+Computer: 127.0.0.1
+==========================================
+---doneCaption: 
+ClientAccessible: 1
+Count: 3
+Description: 
+DeviceObject: \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy11
+Differential: 1
+ExposedLocally: 0
+ExposedName: 
+ExposedPath: 
+ExposedRemotely: 0
+HardwareAssisted: 0
+ID: {01851CB1-377D-4B37-8116-5120417DAAEE}
+Imported: 0
+InstallDate: 20160512113059.042605+060
+Name: 
+NoAutoRelease: 1
+NotSurfaced: 0
+NoWriters: 0
+OriginatingMachine: meatfeup
+Persistent: 1
+Plex: 0
+ProviderID: {B5946137-7B9F-4925-AF80-51ABD60B20D5}
+ServiceMachine: meatfeup
+SetID: {3742BED0-8F7C-4F64-AAC5-12E4F57B127D}
+State: 12
+Status: 
+Transportable: 0
+VolumeName: \\?\Volume{4bea8c0b-875c-11e2-be65-806e6f6e6963}\
+
+Caption: 
+ClientAccessible: 1
+Count: 1
+Description: 
+DeviceObject: \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy13
+Differential: 1
+ExposedLocally: 0
+ExposedName: 
+ExposedPath: 
+ExposedRemotely: 0
+HardwareAssisted: 0
+ID: {9A9CCFE3-359D-4EDD-9750-44DA9485FF4B}
+Imported: 0
+InstallDate: 20160512124019.562501+060
+Name: 
+NoAutoRelease: 1
+NotSurfaced: 0
+NoWriters: 1
+OriginatingMachine: meatfeup
+Persistent: 1
+Plex: 0
+ProviderID: {B5946137-7B9F-4925-AF80-51ABD60B20D5}
+ServiceMachine: meatfeup
+SetID: {65009F10-8F6D-40A9-8EB3-A62E5313D2BB}
+State: 12
+Status: 
+Transportable: 0
+VolumeName: \\?\Volume{4bea8c0b-875c-11e2-be65-806e6f6e6963}\
+
+Caption: 
+ClientAccessible: 1
+Count: 3
+Description: 
+DeviceObject: \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy10
+Differential: 1
+ExposedLocally: 0
+ExposedName: 
+ExposedPath: 
+ExposedRemotely: 0
+HardwareAssisted: 0
+ID: {43C68A42-3765-421D-8A8C-EF703DD9CADB}
+Imported: 0
+InstallDate: 20160512113059.042605+060
+Name: 
+NoAutoRelease: 1
+NotSurfaced: 0
+NoWriters: 0
+OriginatingMachine: meatfeup
+Persistent: 1
+Plex: 0
+ProviderID: {B5946137-7B9F-4925-AF80-51ABD60B20D5}
+ServiceMachine: meatfeup
+SetID: {3742BED0-8F7C-4F64-AAC5-12E4F57B127D}
+State: 12
+Status: 
+Transportable: 0
+VolumeName: \\?\Volume{4bea8c0a-875c-11e2-be65-806e6f6e6963}\
+
+Caption: 
+ClientAccessible: 1
+Count: 1
+Description: 
+DeviceObject: \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy12
+Differential: 1
+ExposedLocally: 0
+ExposedName: 
+ExposedPath: 
+ExposedRemotely: 0
+HardwareAssisted: 0
+ID: {6E9444B0-E528-4C9F-A73C-B1772BF62C46}
+Imported: 0
+InstallDate: 20160512123840.802833+060
+Name: 
+NoAutoRelease: 1
+NotSurfaced: 0
+NoWriters: 1
+OriginatingMachine: meatfeup
+Persistent: 1
+Plex: 0
+ProviderID: {B5946137-7B9F-4925-AF80-51ABD60B20D5}
+ServiceMachine: meatfeup
+SetID: {BF6AC1C1-C7AA-4403-8CD0-97E8BD227763}
+State: 12
+Status: 
+Transportable: 0
+VolumeName: \\?\Volume{4bea8c0a-875c-11e2-be65-806e6f6e6963}\
+
+Caption: 
+ClientAccessible: 1
+Count: 3
+Description: 
+DeviceObject: \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy9
+Differential: 1
+ExposedLocally: 0
+ExposedName: 
+ExposedPath: 
+ExposedRemotely: 0
+HardwareAssisted: 0
+ID: {1F6D87AB-0AC9-4005-AA18-C0363CBDF0AB}
+Imported: 0
+InstallDate: 20160512113059.042605+060
+Name: 
+NoAutoRelease: 1
+NotSurfaced: 0
+NoWriters: 0
+OriginatingMachine: meatfeup
+Persistent: 1
+Plex: 0
+ProviderID: {B5946137-7B9F-4925-AF80-51ABD60B20D5}
+ServiceMachine: meatfeup
+SetID: {3742BED0-8F7C-4F64-AAC5-12E4F57B127D}
+State: 12
+Status: 
+Transportable: 0
+VolumeName: \\?\Volume{4bea8c09-875c-11e2-be65-806e6f6e6963}\
+
