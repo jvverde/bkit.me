@@ -62,7 +62,7 @@ if (defined $cur){
   my ($shcN) = $cur =~ /(HarddiskVolumeShadowCopy\d+)/;
   #my $backup = qx|${rsync} -rltvvhR --chmod=ugo=rwX --inplace --delete-after /proc/sys/Device/${shcN}/.bkit.me/../.${path} me\@10.1.2.6::meatfeup/${drive}/ 2>${cd}\\logs\\err.txt >${cd}\\logs\\logs.txt < ${cd}\\conf\\secret.txt|;
   open my $handler, "|-"
-    ,qq|${rsync} -rltvvhR --chmod=ugo=rwX --inplace --delete-after /proc/sys/Device/${shcN}/.bkit.me/../.${path}|
+    ,qq|${rsync} -rltvvhR --chmod=ugo=rwX --inplace --delete-after --stats /proc/sys/Device/${shcN}/.bkit.me/../.${path}|
     .qq| me\@10.1.2.6::meatfeup/${drive}/ 2>${cd}\\logs\\err.txt >${cd}\\logs\\logs.txt|;
   print $handler "me\n";
 

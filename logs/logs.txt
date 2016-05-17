@@ -1,7 +1,37 @@
 opening tcp connection to 10.1.2.6 port 873
-sending daemon args: --server -vvltrRe.iLsfxC --delete-after --inplace . meatfeup/E/  (6 args)
+sending daemon args: --server -vvltrRe.iLsfxC --delete-after --stats --inplace . meatfeup/C/  (7 args)
 building file list ... done
-total: matches=0  hash_hits=0  false_alarms=0 data=0
+tmp/bkit.me.pl
+tmp/logs/err.txt
+tmp/logs/logs.txt
+total: matches=3  hash_hits=5  false_alarms=0 data=1115
 
-sent 915 bytes  received 11 bytes  617.33 bytes/sec
-total size is 255.61K  speedup is 276.04
+rsync[6008] (sender) heap statistics:
+  arena:         851968   (bytes from sbrk)
+  ordblks:            2   (chunks not in use)
+  smblks:             0
+  hblks:              0   (chunks from mmap)
+  hblkhd:        983040   (bytes from mmap)
+  allmem:       1835008   (bytes from sbrk + mmap)
+  usmblks:      1835008
+  fsmblks:            0
+  uordblks:     1649872   (bytes used)
+  fordblks:      185136   (bytes free)
+  keepcost:      121120   (bytes in releasable chunk)
+
+Number of files: 122 (reg: 75, dir: 47)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 3
+Total file size: 9.73M bytes
+Total transferred file size: 3.21K bytes
+Literal data: 1.11K bytes
+Matched data: 2.10K bytes
+File list size: 0
+File list generation time: 0.596 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 4.92K
+Total bytes received: 110
+
+sent 4.92K bytes  received 110 bytes  3.36K bytes/sec
+total size is 9.73M  speedup is 1,933.04
