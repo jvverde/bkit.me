@@ -20,7 +20,7 @@ my $dir = shift or die 'You must specify a directory';
 my ($drive,$path) = ($dir =~ /^([a-z]):(.*)$/i) or die 'You must include drive letter in directory';
 $drive = uc $drive;
 $path =~ s/[\\]/\//g;    #dos->unix 
-$path =~ s/^[^\/]/\/$&/; #garante um slash no inicio do path
+$path =~ s/^[^\/]?/\/$&/; #garante um slash no inicio do path
 
 sub drive2DevId{
   my $drive = shift;
