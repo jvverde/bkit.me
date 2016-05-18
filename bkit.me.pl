@@ -14,22 +14,35 @@ my $vssadmin = which 'vssadmin';
 my $cd = dirname abs_path $0;
 my $rsync = "$cd\\cygwin\\rsync.exe";
 $rsync = which 'rsync' or die "Cannot find rsync $rsync" unless -e $rsync;
--d "$cd\\logs" or mkdir "$cd\\logs";
+my $subinacl = (which 'subinacl') || "$cd\\3rd-party\\subinacl\\subinacl.exe";
 
 my $dir = shift or die 'You must specify a directory';
 my ($drive,$path) = ($dir =~ /^([a-z]):(.*)$/i) or die 'You must include drive letter in directory';
 $drive = uc $drive;
+$path =~ s/^[^\\]?/\\$&/; #garante um backslash no inicio do path
 $path =~ s/[\\]/\//g;    #dos->unix 
-$path =~ s/^[^\/]?/\/$&/; #garante um slash no inicio do path
 
+my $bkitDir = '.bkit.me';
+my $bkit = "$drive:\\$bkitDir";
+my ($logs,$perms,$vols) = map {-d $_ or mkdir $_; $_} map {"$bkit\\$_"} qw(logs perms vols);
+
+my $acls = "$perms\\acls.txt";
+
+my $mtime = (stat $acls)[9] if -e $acls;
+$mtime //= 0;
+print qx|$subinacl /noverbose /output=$acls /subdirectories $drive:\\| 
+  if $path eq '/' and -e $subinacl and (time - $mtime) > 3600*24*30;#30 day
+
+my $lsv = qx|$perl $cd\\getvol.pl| or die "Error code $? ($!)";
+open my $fhv, ">$vols\\volumes.txt" or warn "Cannot save volumes info to $vols";
+print $fhv $lsv; 
+close $fhv;
+ 
 sub drive2DevId{
-  my $drive = shift;
-  my $lsv = qx|$perl $cd\\lsv.pl| or die "Error code $? ($!)";
+  my ($drive,$lsv) = @_;
   my $volumes = $json->decode($lsv) or die "Not json:$!";
-  my $letters = $volumes->{DriveLetter} or return undef;
-  my ($index) = grep {defined $letters->[$_] and uc $letters->[$_] eq "$drive:"} 0..$#{$letters};
-  my $devId = $volumes->{DeviceID}->[$index] if defined $index and defined $volumes->{DeviceID};
-  return $devId; 
+  my ($volume) = grep{defined $_->{DriveLetter} and uc $_->{DriveLetter} eq "$drive:"} @$volumes;
+  return $volume->{DeviceID};
 }
 
 sub getShadowCopies{
@@ -46,27 +59,22 @@ sub getShadowCopies{
   } grep {defined $volumes->[$_] and $volumes->[$_] eq $volume} 0..$#{$volumes}};
  }
 
--d "$drive:/.bkit.me" or mkdir "$drive:/.bkit.me";
-my $devId = drive2DevId $drive or die "Cannot get DeviceId for drive $drive:$!";
-# my $vss = getShadowCopies $devId;
-# my $prev = $vss->{pop @{[sort keys %$vss]}} if defined $vss and scalar %$vss;
-#print $prev;
-#print Dumper $vss;
-#print Dumper $volumes;
-my $result = system qq|$perl $cd\\csc.pl $drive| and die "Cannot create shadow copy, Error value: $? ($!)";
+
+my $devId = drive2DevId $drive, $lsv or die "Cannot get DeviceId for drive $drive:$!";
+print $devId;
+exit;
+system qq|$perl $cd\\csc.pl $drive| and die "Cannot create shadow copy, Error value: $? ($!)";
 my $cvss = getShadowCopies $devId;
 die 'Cannot get shadow Copies' unless defined $cvss and scalar %$cvss;
 my $lastVssKey = pop @{[sort keys %$cvss]};
 my $cur = $cvss->{$lastVssKey}->{volume};
 if (defined $cur){
   my ($shcN) = $cur =~ /(HarddiskVolumeShadowCopy\d+)/;
-  #my $backup = qx|${rsync} -rltvvhR --chmod=ugo=rwX --inplace --delete-after /proc/sys/Device/${shcN}/.bkit.me/../.${path} me\@10.1.2.6::meatfeup/${drive}/ 2>${cd}\\logs\\err.txt >${cd}\\logs\\logs.txt < ${cd}\\conf\\secret.txt|;
   open my $handler, "|-"
-    ,qq|${rsync} -rltvvhR --chmod=ugo=rwX --inplace --delete-after --stats /proc/sys/Device/${shcN}/.bkit.me/../.${path}|
-    .qq| me\@10.1.2.6::meatfeup/${drive}/ 2>${cd}\\logs\\err.txt >${cd}\\logs\\logs.txt|;
-  print $handler "me\n";
-
-  #print $backup;
+    ,qq|${rsync} -rltvvvhR --chmod=ugo=rwX --inplace --delete-after --stats --exclude-from=$cd\\conf\\excludes.txt|
+    .qq| /proc/sys/Device/${shcN}/${bkitDir}/../.${path} me\@10.1.2.6::meatfeup/${drive}/|
+    .qq| 2>${bkit}\\logs\\err.txt >${bkit}\\logs\\logs.txt|;
+  print $handler "me\n\n";
 }
 
 END {

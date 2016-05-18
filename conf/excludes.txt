@@ -7,5 +7,13 @@ Documents and Settings/*/Cookies
 Documents and Settings/*/Recent
 Documents and Settings/*/Local Settings/Temp
 iobw.tst
-RECYCLER
+RECYCLER/
+Temp/
+*.tmp
+*.dmp
+cache/
+cache2/
+Cache/
+
+
 
