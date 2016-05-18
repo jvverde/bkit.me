@@ -6,8 +6,7 @@ use File::Which;
 use JSON;
 use Data::Dumper;
 use Win32;
-use Sys::Hostname;
-use Net::Domain qw|hostfqdn hostdomain|;
+
 
 ($\,$,) = ("\n","\t");
 my $json = (new JSON)->utf8->pretty;
@@ -22,9 +21,8 @@ print Win32::GetOEMCP();
 print Win32::NodeName();
 print Win32::DomainName();
 print Win32::GetProductInfo($major, $minor, $spmajor, $spminor);
-print hostname;
-print hostfqdn;
-print hostdomain;
+
+
 
 exit;
 
