@@ -1,1 +1,0 @@
-subinacl /noverbose /output=c:\ntfs_perms.txt /subdirectories G:\data\
