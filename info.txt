@@ -1,0 +1,61 @@
+{
+   "Win32_OperatingSystem" : {
+      "Locale" : "0816",
+      "CodeSet" : "1252",
+      "ServicePackMinorVersion" : 0,
+      "ProductType" : 1,
+      "BootDevice" : "\\Device\\HarddiskVolume6",
+      "Name" : "Microsoft Windows 8 Pro|C:\\Windows|\\Device\\Harddisk0\\Partition2",
+      "BuildNumber" : "9200",
+      "BuildType" : "Multiprocessor Free",
+      "Caption" : "Microsoft Windows 8 Pro",
+      "Version" : "6.2.9200",
+      "SystemDirectory" : "C:\\Windows\\system32",
+      "OSProductSuite" : 256,
+      "ServicePackMajorVersion" : 0,
+      "SystemDrive" : "C:",
+      "WindowsDirectory" : "C:\\Windows",
+      "SystemDevice" : "\\Device\\HarddiskVolume2",
+      "OSLanguage" : 2057,
+      "OperatingSystemSKU" : 48,
+      "SerialNumber" : "00178-70000-00011-AA011",
+      "CSName" : "MEATFEUP"
+   },
+   "Win32_BIOS" : {
+      "SMBIOSPresent" : 1,
+      "BuildNumber" : null,
+      "Name" : "Ver 1.00PARTTBLD",
+      "PrimaryBIOS" : 1,
+      "SMBIOSBIOSVersion" : "V1.30",
+      "BIOSVersion" : [
+         "TOSCPL - 6040000",
+         "Ver 1.00PARTTBLD"
+      ],
+      "Manufacturer" : "TOSHIBA",
+      "SMBIOSMinorVersion" : 5,
+      "SystemBiosMajorVersion" : null,
+      "SystemBiosMinorVersion" : null,
+      "SerialNumber" : "79430650K",
+      "SMBIOSMajorVersion" : 2,
+      "Version" : "TOSCPL - 6040000",
+      "SoftwareElementState" : 3
+   },
+   "Win32_ComputerSystem" : {
+      "Workgroup" : "WORKGROUP",
+      "Domain" : "WORKGROUP",
+      "DomainRole" : 0,
+      "DNSHostName" : "meatfeup",
+      "Manufacturer" : "TOSHIBA",
+      "Model" : "Satellite L550",
+      "SystemSKUNumber" : null,
+      "Name" : "MEATFEUP"
+   },
+   "Win32_ComputerSystemProduct" : {
+      "UUID" : "BE12F655-8A5F-DE11-86E9-00235AF75147",
+      "Vendor" : "TOSHIBA",
+      "Name" : "Satellite L550",
+      "IdentifyingNumber" : "79430650K",
+      "Version" : "PSLN8E-01001UEP",
+      "SKUNumber" : null
+   }
+}

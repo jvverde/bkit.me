@@ -1,0 +1,22 @@
+{
+   "osName" : "Win8",
+   "product" : 48,
+   "version" : [
+      "",
+      6,
+      2,
+      9200,
+      2,
+      0,
+      0,
+      256,
+      1
+   ],
+   "oem" : 850,
+   "displayName" : "Windows 8 Professional (64-bit)",
+   "arch" : "AMD64",
+   "nodeName" : "MEATFEUP",
+   "chip" : 8664,
+   "domainName" : "WORKGROUP"
+}
+
