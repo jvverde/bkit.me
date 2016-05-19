@@ -20,7 +20,9 @@ sub saveData{
 
 my $cd = dirname abs_path $0;
 my $sysDir = "$cd\\sysInfo";
+my $logDir = "$cd\\logs";
 -d $sysDir or mkdir $sysDir;
+-d $logDir or mkdir $logDir;
 my $wmiFile = "$sysDir\\wmi.info"; 
 my $sysFile = "$sysDir\\sys.info";
 
@@ -58,9 +60,12 @@ my $uuid = $wmiInfo->{Win32_ComputerSystemProduct}->{UUID} || '_';
 my $name = $sysInfo->{nodeName};
 my $domain = $sysInfo->{domainName}; 
 
-#open my $handler, "|-"
-  print qq|${rsync} -rltvvhR --chmod=ugo=rwX --inplace --stats|
-  .qq| ${sysDir}\\.\\ admin\@10.1.2.6::bkit.me/${uuid}/${domain}/${name}|
-  .qq| 2>${sysDir}\\err.txt >${sysDir}\\logs.txt|;
-#print $handler "4dm1n\n\n";
+my $path = $sysDir;
+$path =~ s/[\\]/\//g; #dos->unix
+$path =~ s/^([a-z]):/\/cygdrive\/$1/i;
+open my $handler, "|-"
+  ,qq|${rsync} -rltvvhR --inplace --stats |
+  .qq| ${path}/./ rsync://admin\@10.1.2.6:8733/bkit.me/${uuid}/${domain}/${name}|
+  .qq| 2>${logDir}\\err.txt >${logDir}\\logs.txt|;
+print $handler "4dm1n\n\n";
 

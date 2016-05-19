@@ -1,8 +1,8 @@
 {
-   "osName" : "Win8",
    "nodeName" : "MEATFEUP",
-   "chip" : 8664,
-   "displayName" : "Windows 8 Professional (64-bit)",
+   "domainName" : "WORKGROUP",
+   "arch" : "AMD64",
+   "product" : 48,
    "version" : [
       "",
       6,
@@ -14,9 +14,9 @@
       256,
       1
    ],
-   "domainName" : "WORKGROUP",
+   "displayName" : "Windows 8 Professional (64-bit)",
    "oem" : 850,
-   "product" : 48,
-   "arch" : "AMD64"
+   "osName" : "Win8",
+   "chip" : 8664
 }
 

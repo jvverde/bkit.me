@@ -1,62 +1,62 @@
 {
-   "Win32_ComputerSystemProduct" : {
-      "Version" : "PSLN8E-01001UEP",
-      "UUID" : "BE12F655-8A5F-DE11-86E9-00235AF75147",
-      "Name" : "Satellite L550",
-      "Vendor" : "TOSHIBA",
-      "IdentifyingNumber" : "79430650K",
-      "SKUNumber" : null
+   "Win32_ComputerSystem" : {
+      "DomainRole" : 0,
+      "Name" : "MEATFEUP",
+      "Domain" : "WORKGROUP",
+      "Model" : "Satellite L550",
+      "Workgroup" : "WORKGROUP",
+      "SystemSKUNumber" : null,
+      "DNSHostName" : "meatfeup",
+      "Manufacturer" : "TOSHIBA"
    },
    "Win32_BIOS" : {
       "SMBIOSMajorVersion" : 2,
-      "PrimaryBIOS" : 1,
+      "Manufacturer" : "TOSHIBA",
+      "SerialNumber" : "79430650K",
+      "SystemBiosMajorVersion" : null,
       "BIOSVersion" : [
          "TOSCPL - 6040000",
          "Ver 1.00PARTTBLD"
       ],
-      "SoftwareElementState" : 3,
-      "Manufacturer" : "TOSHIBA",
-      "Version" : "TOSCPL - 6040000",
+      "SMBIOSBIOSVersion" : "V1.30",
       "SMBIOSPresent" : 1,
       "BuildNumber" : null,
+      "Version" : "TOSCPL - 6040000",
       "SystemBiosMinorVersion" : null,
-      "SystemBiosMajorVersion" : null,
+      "PrimaryBIOS" : 1,
+      "SMBIOSMinorVersion" : 5,
       "Name" : "Ver 1.00PARTTBLD",
-      "SerialNumber" : "79430650K",
-      "SMBIOSBIOSVersion" : "V1.30",
-      "SMBIOSMinorVersion" : 5
+      "SoftwareElementState" : 3
    },
-   "Win32_ComputerSystem" : {
-      "Manufacturer" : "TOSHIBA",
-      "SystemSKUNumber" : null,
-      "Workgroup" : "WORKGROUP",
-      "DomainRole" : 0,
-      "Domain" : "WORKGROUP",
-      "DNSHostName" : "meatfeup",
-      "Name" : "MEATFEUP",
-      "Model" : "Satellite L550"
+   "Win32_ComputerSystemProduct" : {
+      "Name" : "Satellite L550",
+      "UUID" : "BE12F655-8A5F-DE11-86E9-00235AF75147",
+      "IdentifyingNumber" : "79430650K",
+      "Version" : "PSLN8E-01001UEP",
+      "Vendor" : "TOSHIBA",
+      "SKUNumber" : null
    },
    "Win32_OperatingSystem" : {
-      "CSName" : "MEATFEUP",
-      "OperatingSystemSKU" : 48,
-      "Name" : "Microsoft Windows 8 Pro|C:\\Windows|\\Device\\Harddisk0\\Partition2",
-      "BootDevice" : "\\Device\\HarddiskVolume6",
-      "CodeSet" : "1252",
-      "ServicePackMinorVersion" : 0,
-      "Version" : "6.2.9200",
-      "OSLanguage" : 2057,
-      "Locale" : "0816",
-      "OSProductSuite" : 256,
-      "SystemDevice" : "\\Device\\HarddiskVolume2",
-      "BuildType" : "Multiprocessor Free",
-      "SerialNumber" : "00178-70000-00011-AA011",
-      "WindowsDirectory" : "C:\\Windows",
-      "SystemDrive" : "C:",
-      "Caption" : "Microsoft Windows 8 Pro",
-      "SystemDirectory" : "C:\\Windows\\system32",
       "BuildNumber" : "9200",
+      "SystemDirectory" : "C:\\Windows\\system32",
+      "SerialNumber" : "00178-70000-00011-AA011",
+      "CodeSet" : "1252",
       "ServicePackMajorVersion" : 0,
-      "ProductType" : 1
+      "Name" : "Microsoft Windows 8 Pro|C:\\Windows|\\Device\\Harddisk0\\Partition2",
+      "WindowsDirectory" : "C:\\Windows",
+      "CSName" : "MEATFEUP",
+      "ServicePackMinorVersion" : 0,
+      "SystemDrive" : "C:",
+      "BootDevice" : "\\Device\\HarddiskVolume6",
+      "Locale" : "0816",
+      "ProductType" : 1,
+      "SystemDevice" : "\\Device\\HarddiskVolume2",
+      "OperatingSystemSKU" : 48,
+      "Version" : "6.2.9200",
+      "BuildType" : "Multiprocessor Free",
+      "Caption" : "Microsoft Windows 8 Pro",
+      "OSProductSuite" : 256,
+      "OSLanguage" : 2057
    }
 }
 
